@@ -25,13 +25,16 @@ public class App {
         
         if (Float.parseFloat(filmes.get("imDbRating")) <= 6) {
             //imprime Classificação em vermelho se for menor que 6
-            System.out.println("\u001b[1m \u001b[31m Classificação: \u001b[0m " + "\u001b[31m" + filmes.get("imDbRating"));        
+            System.out.println("\u001b[1m \u001b[31m Classificação: \u001b[0m " + "\u001b[31m" + filmes.get("imDbRating"));
+            System.out.println("\u001b[1m \u001b[33m"+ BuildStar.star(Float.parseFloat(filmes.get("imDbRating"))));        
         }else if(Float.parseFloat(filmes.get("imDbRating")) <= 8){
             //imprime Classificação em amarelo se for menor que 6
             System.out.println("\u001b[1m \u001b[33m Classificação: \u001b[0m " + "\u001b[33m" + filmes.get("imDbRating"));
+            System.out.println("\u001b[1m \u001b[33m"+ BuildStar.star(Float.parseFloat(filmes.get("imDbRating"))));
         } else{
             //imprime Classificação em verde se for menor que 6
             System.out.println("\u001b[1m \u001b[32m Classificação: \u001b[0m " + "\u001b[32m" + filmes.get("imDbRating"));   
+            System.out.println("\u001b[1m \u001b[33m"+ BuildStar.star(Float.parseFloat(filmes.get("imDbRating"))));
         }   
         System.out.println();
         
